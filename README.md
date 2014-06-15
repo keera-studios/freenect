@@ -38,8 +38,12 @@ Lastly, ensure you never have to run libfreenect code as an administrator by cop
 
 ## Installing this library
 
-First check out the code:
+First check out the code. There are several forks, we obviously prefer our own.
+Chris Done is the official (the one on github), but for some reason I don't
+understand, he tells people to check out kevincon's instead.
 
+    git clone git@github.com:keera-studios/freenect.git
+    git clone git@github.com:chrisdone/freenect.git
     git clone git@github.com:kevincon/freenect.git
 
 Next, move into the folder and install using cabal:
