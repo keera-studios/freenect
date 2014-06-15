@@ -83,6 +83,6 @@ To run the GlutRGB.hs program, which displays the real-time RGB video stream fro
   users should *not* be calling the low-level C functions.
 * Why does is Freenect a top-level module? It should be in System., or even somewhere
   else inside System. For instance. System.Devices, or System.Input (although kinects
-  and wiimotes act as output sources as well, so it's difficult to categorise them
+  and wiimotes act as output devices as well, so it's difficult to categorise them
   as either input or output).
 
