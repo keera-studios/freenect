@@ -38,8 +38,12 @@ Lastly, ensure you never have to run libfreenect code as an administrator by cop
 
 ## Installing this library
 
-First check out the code:
+First check out the code. There are several forks, we obviously prefer our own.
+Chris Done is the official (the one on github), but for some reason I don't
+understand, he tells people to check out kevincon's instead.
 
+    git clone git@github.com:keera-studios/freenect.git
+    git clone git@github.com:chrisdone/freenect.git
     git clone git@github.com:kevincon/freenect.git
 
 Next, move into the folder and install using cabal:
@@ -75,3 +79,10 @@ To run the GlutRGB.hs program, which displays the real-time RGB video stream fro
 # TODO
 
 * Couple parts in the Haskell FFI do some mallocation, must add the necessary free()-equivalent calls.
+* Why does Freenect export FFI? It should only export those types that are necessary,
+  users should *not* be calling the low-level C functions.
+* Why does is Freenect a top-level module? It should be in System., or even somewhere
+  else inside System. For instance. System.Devices, or System.Input (although kinects
+  and wiimotes act as output devices as well, so it's difficult to categorise them
+  as either input or output).
+
